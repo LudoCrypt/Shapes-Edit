@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
+import com.google.common.collect.Sets;
 import com.mojang.brigadier.StringReader;
 import com.mojang.brigadier.arguments.ArgumentType;
 import com.mojang.brigadier.context.CommandContext;
@@ -17,7 +18,7 @@ import net.minecraft.util.math.Direction.Axis;
 
 public class DirectionAxisArgument implements ArgumentType<Direction.Axis> {
 
-	private static final Set<String> AXIS = Set.of("X", "Y", "Z");
+	private static final Set<String> AXIS = Sets.newHashSet("X", "Y", "Z");
 
 	public DirectionAxisArgument() {
 

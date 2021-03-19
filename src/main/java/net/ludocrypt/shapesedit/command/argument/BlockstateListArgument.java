@@ -38,7 +38,7 @@ public class BlockstateListArgument implements ArgumentType<List<BlockState>> {
 
 		while (length > 0) {
 			reader.expect(' ');
-			BlockStateArgumentType.blockState().parse(reader);
+			list.add(BlockStateArgumentType.blockState().parse(reader).getBlockState());
 			length--;
 		}
 

@@ -38,7 +38,7 @@ public class ListFiller implements Filler {
 	@Override
 	public void accept(Position position) {
 		if (!this.list.isEmpty()) {
-			world.setBlockState(position.toBlockPos(), this.list.get(this.random.nextInt(this.list.size()) + 1), this.flags);
+			world.setBlockState(position.toBlockPos(), list.get(random.nextInt(list.size())), this.flags);
 		}
 	}
 }

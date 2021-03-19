@@ -201,9 +201,9 @@ public class ShapesEditCommands {
 	public static LiteralCommandNode<ServerCommandSource> registerListFiller(CommandDispatcher<ServerCommandSource> dispatcher) {
 		return dispatcher.register(literal("shape").requires((context) -> {
 			return context.hasPermissionLevel(2);
-		}).then(literal("finish").then(literal("fill").then(literal("list").then(argument("list", blockList()).executes((context) -> {
+		}).then(literal("finish").then(literal("fill").then(literal("list").then(argument("state_list", blockList()).executes((context) -> {
 			ShapeAccess.getSourceShape(context.getSource()).validate(ValidatorAccess.getValidator(context.getSource()), (validShape) -> {
-				validShape.fill(new ListFiller(context.getSource().getWorld(), context.getSource().getWorld().getRandom(), getBlockList(context, "list")));
+				validShape.fill(new ListFiller(context.getSource().getWorld(), context.getSource().getWorld().getRandom(), getBlockList(context, "state_list")));
 			});
 			return 1;
 		}))))));

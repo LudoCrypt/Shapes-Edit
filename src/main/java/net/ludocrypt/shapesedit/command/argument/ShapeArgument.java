@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
+import com.google.common.collect.Sets;
 import com.mojang.brigadier.StringReader;
 import com.mojang.brigadier.arguments.ArgumentType;
 import com.mojang.brigadier.context.CommandContext;
@@ -18,7 +19,7 @@ import net.minecraft.command.CommandSource;
 
 public class ShapeArgument implements ArgumentType<Shape> {
 
-	private static final Set<String> SHAPES = Set.of("rectangle", "ellipse", "elliptical_prism", "rectangular_prism", "triangular_prism", "rectangular_pyramid", "elliptical_pyramid", "ellipsoid", "hemi_ellipsoid");
+	private static final Set<String> SHAPES = Sets.newHashSet("rectangle", "ellipse", "elliptical_prism", "rectangular_prism", "triangular_prism", "rectangular_pyramid", "elliptical_pyramid", "ellipsoid", "hemi_ellipsoid");
 
 	public ShapeArgument() {
 
