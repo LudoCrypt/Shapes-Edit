@@ -9,8 +9,8 @@
 	],
 	"contact": {
 		"homepage": "https://www.curseforge.com/minecraft/mc-mods/shapes-edit",
-		"issues": "",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"issues": "https://github.com/LudoCrypt/Shapes-Edit/issues",
+		"sources": "https://github.com/LudoCrypt/Shapes-Edit"
 	},
 	"license": "LGPLv3",
 	"icon": "assets/shapesedit/icon.png",
